@@ -3,7 +3,7 @@ a {
 }
 
 
-  /* ハンバーガーメニュー */
+/* ハンバーガーメニュー */
 .hamburger-overlay {
   position: fixed;
   top: 20px;
@@ -163,25 +163,27 @@ body {
 /* PC */
 @media screen and (min-width: 767px) {
 
-.header_logo {
-  position: absolute;
-  width: 7%;
-  height: auto;
-  margin: 5px 0px 5px 5px;
-}
+  .header_logo {
+    position: absolute;
+    width: 7%;
+    height: auto;
+    margin: 5px 0px 5px 5px;
+  }
+
   /* 団体説明 */
-  .santenAbout{
+  .santenAbout {
     display: flex;
   }
-    .aboutSanten {
+
+  .aboutSanten {
     height: 110vh;
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: 0;
     margin-top: 0%;
     /* filter: drop-shadow(0 0 6px black); */
     /* border-radius: 3%; */
     float: right;
-    
+
   }
 
   .santenText {
@@ -192,17 +194,20 @@ body {
     color: #000000;
     font-size: large;
     line-height: 2;
+    font-family: "Yomogi", cursive;
   }
+
   /* メンバー紹介 */
   .santenMember {
-  background-image:
-    linear-gradient(0deg, transparent 19px, #d3d3d3 20px),
-    linear-gradient(90deg, transparent 19px, #d3d3d3 20px);
-  background-size: 20px 20px;
-  font-family: "Yomogi", cursive;
-  margin-top: 0;
+    background-image:
+      linear-gradient(0deg, transparent 19px, #d3d3d3 20px),
+      linear-gradient(90deg, transparent 19px, #d3d3d3 20px);
+    background-size: 20px 20px;
+    font-family: "Yomogi", cursive;
+    margin-top: 0;
 
-}
+  }
+
   .role {
     font-weight: 400;
   }
@@ -273,14 +278,15 @@ body {
 /* スマホ */
 @media screen and (max-width: 767px) {
 
-.header_logo {
-  position: absolute;
-  z-index: 2;
-  width: 13%;
-  height: auto;
-  margin: 5px 0px 5px 5px;
+  .header_logo {
+    position: absolute;
+    z-index: 2;
+    width: 13%;
+    height: auto;
+    margin: 5px 0px 5px 5px;
 
-}
+  }
+
   /* 団体説明 */
   .aboutSanten {
     width: 100%;
@@ -305,14 +311,15 @@ body {
 
   /* メンバー紹介 */
   .santenMember {
-  margin-top: 2rem;
-  background-image:
-    linear-gradient(0deg, transparent 19px, #d3d3d3 20px),
-    linear-gradient(90deg, transparent 19px, #d3d3d3 20px);
-  background-size: 20px 20px;
-  font-family: "Yomogi", cursive;
+    margin-top: 2rem;
+    background-image:
+      linear-gradient(0deg, transparent 19px, #d3d3d3 20px),
+      linear-gradient(90deg, transparent 19px, #d3d3d3 20px);
+    background-size: 20px 20px;
+    font-family: "Yomogi", cursive;
 
-}
+  }
+
   .role {
     text-align: right;
   }
