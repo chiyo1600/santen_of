@@ -229,6 +229,7 @@ h2{
     button{
       background-color: #ffffff;
       border: none;
+      color: #000000;
     }
 
 /* バナー */
@@ -251,7 +252,7 @@ h2{
   z-index: 3;
   position: absolute;
   margin: 5px;
-  font-size: large;
+  font-size:medium;
   text-decoration: dashed;
   color: #fffcfc;
   font-weight: 700;

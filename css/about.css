@@ -1,14 +1,9 @@
-
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
 
-.santenMember{
-}
-
-
-/* ハンバーガーメニュー */
+  /* ハンバーガーメニュー */
 .hamburger-overlay {
   position: fixed;
   top: 20px;
@@ -30,9 +25,17 @@ a{
   transition: all .6s;
 }
 
-.hamburger-overlay__line:nth-of-type(1) { top: 14px; }
-.hamburger-overlay__line:nth-of-type(2) { top: 23px; }
-.hamburger-overlay__line:nth-of-type(3) { top: 32px; }
+.hamburger-overlay__line:nth-of-type(1) {
+  top: 14px;
+}
+
+.hamburger-overlay__line:nth-of-type(2) {
+  top: 23px;
+}
+
+.hamburger-overlay__line:nth-of-type(3) {
+  top: 32px;
+}
 
 .hamburger-overlay.active .hamburger-overlay__line {
   background-color: #fff;
@@ -41,9 +44,11 @@ a{
 .hamburger-overlay.active .hamburger-overlay__line:nth-of-type(1) {
   transform: translateY(9px) rotate(-45deg);
 }
+
 .hamburger-overlay.active .hamburger-overlay__line:nth-of-type(2) {
   opacity: 0;
 }
+
 .hamburger-overlay.active .hamburger-overlay__line:nth-of-type(3) {
   transform: translateY(-9px) rotate(45deg);
 }
@@ -92,11 +97,25 @@ a{
   transform: translateY(0);
 }
 
-.nav-overlay.active .nav-overlay__item:nth-child(1) { transition-delay: 0.1s; }
-.nav-overlay.active .nav-overlay__item:nth-child(2) { transition-delay: 0.2s; }
-.nav-overlay.active .nav-overlay__item:nth-child(3) { transition-delay: 0.3s; }
-.nav-overlay.active .nav-overlay__item:nth-child(4) { transition-delay: 0.4s; }
-.nav-overlay.active .nav-overlay__item:nth-child(5) { transition-delay: 0.5s; }
+.nav-overlay.active .nav-overlay__item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.nav-overlay.active .nav-overlay__item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.nav-overlay.active .nav-overlay__item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.nav-overlay.active .nav-overlay__item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.nav-overlay.active .nav-overlay__item:nth-child(5) {
+  transition-delay: 0.5s;
+}
 
 .nav-overlay__link {
   display: inline-block;
@@ -107,28 +126,154 @@ a{
   transition: color .3s;
 }
 
-
 /* 三転倒立とは */
 
-body{
-    font-family: 'Sawarabi Gothic', sans-serif;
-    /* background-color: #181818; */
+body {
+  font-family: 'Sawarabi Gothic', sans-serif;
+  /* background-color: #181818; */
 }
 
-.aboutSanten{
-  width: 100%;
-  /* height: auto; */
-  z-index: 1;
-  top:0;
-  /* filter: grayscale(80%); */
-  filter: drop-shadow(0 0 6px black);
-  border-radius: 3%;
 
-}
-.santenInfo{
+.santenInfo {
   position: relative;
 }
-.header_logo{
+
+
+/* メンバー */
+
+.santenMember {
+  margin-top: 2rem;
+  background-image:
+    linear-gradient(0deg, transparent 19px, #d3d3d3 20px),
+    linear-gradient(90deg, transparent 19px, #d3d3d3 20px);
+  background-size: 20px 20px;
+  font-family: "Yomogi", cursive;
+
+}
+
+.nembertitle {
+  margin: 2em 0;
+  position: relative;
+  padding: 1em 1.5em;
+  border-top: solid 1.3px black;
+  border-bottom: solid 1.3px black;
+}
+
+
+/* PC */
+@media screen and (min-width: 767px) {
+
+.header_logo {
+  position: absolute;
+  width: 7%;
+  height: auto;
+  margin: 5px 0px 5px 5px;
+}
+  /* 団体説明 */
+  .santenAbout{
+    display: flex;
+  }
+    .aboutSanten {
+    height: 110vh;
+    margin-left: auto; 
+    margin-right: 0;
+    margin-top: 0%;
+    /* filter: drop-shadow(0 0 6px black); */
+    /* border-radius: 3%; */
+    float: right;
+    
+  }
+
+  .santenText {
+    display: block;
+    margin-left: 15vh;
+    z-index: 3;
+    margin-top: 15vh;
+    color: #000000;
+    font-size: large;
+    line-height: 2;
+  }
+  /* メンバー紹介 */
+  .santenMember {
+  background-image:
+    linear-gradient(0deg, transparent 19px, #d3d3d3 20px),
+    linear-gradient(90deg, transparent 19px, #d3d3d3 20px);
+  background-size: 20px 20px;
+  font-family: "Yomogi", cursive;
+  margin-top: 0;
+
+}
+  .role {
+    font-weight: 400;
+  }
+
+  .menberImg {
+    margin: 1rem;
+    width: 150px;
+    /* ※縦横を同値に */
+    height: 150px;
+    /* ※縦横を同値に */
+    border-radius: 50%;
+    /* 角丸半径を50%にする(=円形にする) */
+    background-position: left top;
+    /* 横長画像の左上を基準に表示 */
+  }
+
+  .hinano {
+    display: flex;
+    margin: 1rem;
+    padding: 1.3rem 1rem;
+    border-radius: 30px 60px / 60px 30px;
+    /* 角をランダムに丸めて手書き風に */
+    border: solid 1.5px #000000;
+    /* 太めの枠線（8px、色: #ccc7be） */
+  }
+
+  .chiyo {
+    display: flex;
+    margin: 1rem;
+    padding: 1.3rem 1rem;
+    border-radius: 60px 20px / 40px 50px;
+    /* 角をランダムに丸めて手書き風に */
+    border: solid 1.5px #000000;
+    /* 太めの枠線（8px、色: #ccc7be） */
+  }
+
+  .mizuki {
+    display: flex;
+    margin: 1rem;
+    padding: 1.3rem 1rem;
+    border-radius: 40px 50px / 70px 20px;
+    /* 角をランダムに丸めて手書き風に */
+    border: solid 1.5px #000000;
+    /* 太めの枠線（8px、色: #ccc7be） */
+  }
+
+  .yukiko {
+    display: flex;
+    margin: 1rem;
+    padding: 1.3rem 1rem;
+    border-radius: 70px 30px / 20px 60px;
+    /* 角をランダムに丸めて手書き風に */
+    border: solid 1.5px #000000;
+    /* 太めの枠線（8px、色: #ccc7be） */
+  }
+
+  .honoka {
+    display: flex;
+    margin: 1rem;
+    padding: 1.3rem 1rem;
+    border-radius: 70px 30px / 40px 60px;
+    /* 角をランダムに丸めて手書き風に */
+    border: solid 1.5px #000000;
+    /* 太めの枠線（8px、色: #ccc7be） */
+  }
+}
+
+/* スマホ */
+@media screen and (max-width: 767px) {
+
+.header_logo {
   position: absolute;
   z-index: 2;
   width: 13%;
@@ -136,95 +281,102 @@ body{
   margin: 5px 0px 5px 5px;
 
 }
-.santenText{
-  position: absolute;
-  margin: 0 0;
-  z-index: 3;
-  top: 15%;
-  left: 1rem;
-  color: #fff;
-  font-size: small;
-  line-height: 2;
+  /* 団体説明 */
+  .aboutSanten {
+    width: 100%;
+    /* height: auto; */
+    z-index: 1;
+    top: 0;
+    filter: drop-shadow(0 0 6px black);
+    border-radius: 3%;
+    filter: sepia(70%) opacity(40%);
+  }
 
-}
+  .santenText {
+    position: absolute;
+    margin: 0 0;
+    z-index: 3;
+    top: 15%;
+    left: 1rem;
+    color: #000000;
+    font-size: small;
+    line-height: 2;
+  }
 
-/* メンバー */
-
-.santenMember{
+  /* メンバー紹介 */
+  .santenMember {
   margin-top: 2rem;
-  background-image: 
-  linear-gradient(0deg, transparent 19px, #d3d3d3 20px), /* 横のグラデーション */
-  linear-gradient(90deg, transparent 19px, #d3d3d3 20px); /* 縦のグラデーション */
-  background-size: 20px 20px; /* 方眼のサイズ */
-  /* font-family: "Zen Kurenaido", sans-serif; */
-  /* font-family: "Yusei Magic", sans-serif; */
+  background-image:
+    linear-gradient(0deg, transparent 19px, #d3d3d3 20px),
+    linear-gradient(90deg, transparent 19px, #d3d3d3 20px);
+  background-size: 20px 20px;
   font-family: "Yomogi", cursive;
 
 }
-.nembertitle{
-  margin:2em 0;
-  position: relative;
-  padding: 1em 1.5em;
-  border-top: solid 1.3px black;
-  border-bottom: solid 1.3px black;
-}
-.menberImg{
-    margin: 10px;
-    padding-right: 1rem;
-    width:  150px;       /* ※縦横を同値に */
-    height: 150px;       /* ※縦横を同値に */
-    border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
-    background-position: left top;  /* 横長画像の左上を基準に表示 */
+  .role {
+    text-align: right;
+  }
+
+  .menberImg {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    /* ※縦横を同値に */
+    height: 150px;
+    /* ※縦横を同値に */
+    border-radius: 50%;
+    /* 角丸半径を50%にする(=円形にする) */
+    background-position: left top;
+    /* 横長画像の左上を基準に表示 */
+  }
+
+  .hinano {
+    margin: 1rem;
+    padding: 1.3rem 1rem;
+    border-radius: 30px 60px / 60px 30px;
+    /* 角をランダムに丸めて手書き風に */
+    border: solid 1.5px #000000;
+    /* 太めの枠線（8px、色: #ccc7be） */
+  }
+
+  .chiyo {
+    margin: 1rem;
+    padding: 1.3rem 1rem;
+    border-radius: 60px 20px / 40px 50px;
+    /* 角をランダムに丸めて手書き風に */
+    border: solid 1.5px #000000;
+    /* 太めの枠線（8px、色: #ccc7be） */
+  }
+
+  .mizuki {
+    margin: 1rem;
+    padding: 1.3rem 1rem;
+    border-radius: 40px 50px / 70px 20px;
+    /* 角をランダムに丸めて手書き風に */
+    border: solid 1.5px #000000;
+    /* 太めの枠線（8px、色: #ccc7be） */
+  }
+
+  .yukiko {
+    margin: 1rem;
+    padding: 1.3rem 1rem;
+    border-radius: 70px 30px / 20px 60px;
+    /* 角をランダムに丸めて手書き風に */
+    border: solid 1.5px #000000;
+    /* 太めの枠線（8px、色: #ccc7be） */
+  }
+
+  .honoka {
+    margin: 1rem;
+    padding: 1.3rem 1rem;
+    border-radius: 70px 30px / 40px 60px;
+    /* 角をランダムに丸めて手書き風に */
+    border: solid 1.5px #000000;
+    /* 太めの枠線（8px、色: #ccc7be） */
+  }
 }
 
-@media screen and (min-width: 767px) {
-  .role{
-    font-weight: 400;
-}
-}
-@media screen and (max-width: 767px) {
-  .role{
-  text-align: right;
-}
-}
-
-h4, h5{
+h4,
+h5 {
   margin: 1px;
-}
-
-.hinano{
-  display: flex;
-  margin: 1rem;
-  padding: 1.3rem 1rem;
-  border-radius: 30px 60px / 60px 30px;  /* 角をランダムに丸めて手書き風に */
-  border: solid 1.5px #000000;   /* 太めの枠線（8px、色: #ccc7be） */
-}
-
-.chiyo{
-  display: flex;
-  margin: 1rem;
-  padding: 1.3rem 1rem;
-  border-radius: 60px 20px / 40px 50px;  /* 角をランダムに丸めて手書き風に */
-  border: solid 1.5px #000000;   /* 太めの枠線（8px、色: #ccc7be） */
-}
-.mizuki{
-  display: flex;
-  margin: 1rem;
-  padding: 1.3rem 1rem;
-  border-radius: 40px 50px / 70px 20px;  /* 角をランダムに丸めて手書き風に */
-  border: solid 1.5px #000000;   /* 太めの枠線（8px、色: #ccc7be） */
-}
-.yukiko{
-  display: flex;
-  margin: 1rem;
-  padding: 1.3rem 1rem;
-  border-radius: 70px 30px / 20px 60px;  /* 角をランダムに丸めて手書き風に */
-  border: solid 1.5px #000000;   /* 太めの枠線（8px、色: #ccc7be） */
-}
-.honoka{
-  display: flex;
-  margin: 1rem;
-  padding: 1.3rem 1rem;
-  border-radius: 70px 30px / 40px 60px;  /* 角をランダムに丸めて手書き風に */
-  border: solid 1.5px #000000;   /* 太めの枠線（8px、色: #ccc7be） */
 }
