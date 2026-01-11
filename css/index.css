@@ -185,6 +185,7 @@ h2 {
 .newsList .item .title {
   margin: 0;
   width: 100%;
+  padding: 1px 6px;
 }
 
 .title {
@@ -259,6 +260,8 @@ button {
   border: none;
   color: #000000;
   font-size: small;
+  font-family: 'Sawarabi Gothic', sans-serif;
+
 }
 
 /* バナー */
