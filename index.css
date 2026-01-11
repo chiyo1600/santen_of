@@ -1,0 +1,406 @@
+/* pc表示 */
+
+body {
+  /* background-color: #1c1616; */
+  font-family: 'Sawarabi Gothic', sans-serif;
+  background-color: #f8f8f3;
+}
+
+.top {
+  position: relative;
+}
+
+.header_logo {
+  position: absolute;
+  width: 13%;
+  height: auto;
+  margin: 5px 0px 5px 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.santen_main {
+  width: 100%;
+}
+
+
+.sns {}
+
+.santenInfo {}
+
+.santenMember {}
+
+
+/* ハンバーガーメニュー */
+.hamburger-overlay {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hamburger-overlay__line {
+  position: absolute;
+  left: 11px;
+  width: 26px;
+  height: 2px;
+  background-color: #ffffff;
+  transition: all .6s;
+}
+
+.hamburger-overlay__line:nth-of-type(1) {
+  top: 14px;
+}
+
+.hamburger-overlay__line:nth-of-type(2) {
+  top: 23px;
+}
+
+.hamburger-overlay__line:nth-of-type(3) {
+  top: 32px;
+}
+
+.hamburger-overlay.active .hamburger-overlay__line {
+  background-color: #fff;
+}
+
+.hamburger-overlay.active .hamburger-overlay__line:nth-of-type(1) {
+  transform: translateY(9px) rotate(-45deg);
+}
+
+.hamburger-overlay.active .hamburger-overlay__line:nth-of-type(2) {
+  opacity: 0;
+}
+
+.hamburger-overlay.active .hamburger-overlay__line:nth-of-type(3) {
+  transform: translateY(-9px) rotate(45deg);
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(117, 117, 117, 0.95);
+  visibility: hidden;
+  opacity: 0;
+  transition: all .6s;
+  z-index: 900;
+}
+
+.nav-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-overlay__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.nav-overlay__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-overlay__item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all .6s;
+}
+
+.nav-overlay.active .nav-overlay__item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-overlay.active .nav-overlay__item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.nav-overlay.active .nav-overlay__item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.nav-overlay.active .nav-overlay__item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.nav-overlay.active .nav-overlay__item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.nav-overlay.active .nav-overlay__item:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+.nav-overlay__link {
+  display: inline-block;
+  padding: 20px;
+  color: #fff;
+  font-size: 150x;
+  text-decoration: none;
+  transition: color .3s;
+}
+
+/* News */
+h2 {
+  padding: 0.5rem 1rem;
+  border-left: 6px double #000;
+}
+
+.newsList {
+  list-style: none outside;
+  margin: 0;
+  padding: 0;
+}
+
+.newsList .item a {
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #CCC;
+  padding: 20px 20px;
+}
+
+.newsList .item:first-child a {
+  border-top: 1px solid #CCC;
+}
+
+.newsList .item .title {
+  margin: 0;
+  width: 100%;
+}
+
+.title {
+  font-size: small;
+}
+
+/* 装飾 */
+
+* {
+  box-sizing: border-box;
+}
+
+/* 点 */
+.box {
+  margin: 0 10px 0 0;
+  padding: 0 10px 0 0;
+  width: 20px;
+  height: 20px;
+  background-color: #000000;
+  transition: background-color 0.3s, width 0.3s, height 0.3s, transform 0.3s;
+  /* 修正: すべての変更されるプロパティに対するTransitionを指定 */
+}
+
+.newsList .item a:hover .box {
+  border: 5px double #2b2b2b;
+  background-color: #ffffff;
+  width: 22px;
+  /* 追加: 幅を変更 */
+  height: 22px;
+  /* 追加: 高さを変更 */
+  transform: scale(1.2);
+  /* マウスオーバー時にサイズを変更 */
+}
+
+/* ポップアップ */
+.popupBack {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.popupOpen {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  width: 85%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffffe5;
+  padding: 20px;
+  /* border-radius: 8px; */
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.6);
+  font-size: small;
+}
+
+.popupClose {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #666;
+}
+
+button {
+  background-color: #f8f8f3;
+  border: none;
+  color: #000000;
+  font-size: small;
+}
+
+/* バナー */
+
+.stage {
+  margin: 0.5rem;
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerImg {
+  width: 100%;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 5px black);
+}
+
+/* PC */
+@media screen and (min-width: 767px) {
+  .bannerTitle {
+  z-index: 3;
+  position: absolute;
+  /* margin: 5px; */
+  font-size: larger;
+  text-decoration: dashed;
+  color: #fffcfc;
+  font-weight: 700;
+  font-family: 'Sawarabi Mincho', sans-serif;
+}
+}
+
+/* スマホ */
+@media screen and (max-width: 767px) {
+  .bannerTitle {
+  z-index: 3;
+  position: absolute;
+  /* margin: 5px; */
+  font-size:small;
+  text-decoration: dashed;
+  color: #fffcfc;
+  font-weight: 700;
+  font-family: 'Sawarabi Mincho', sans-serif;
+}
+}
+/* .banner{
+  position: relative;
+  }
+  
+.stage img{
+  width: 95%;
+  text-align: center;
+}
+
+.bannerTitle{
+  position: absolute;
+  margin: 0 0;
+  z-index: 3;
+  top: 40%;
+  left: 23%;
+  color: #fff;
+  font-size: larger;
+} */
+
+/* SNS */
+.sns {
+  display: flex;
+  margin-top: 10vh;
+  width: 100%;
+}
+
+/* .x {
+  padding: 1% 7%;
+  margin: 0 auto;
+  color: #000000;
+  font-size: small;
+  border: 3px double #2b2b2b;
+  background: linear-gradient(to bottom right, #ffffff 40%, #7bc9fa);
+  background-position: 0 50%;
+  background-size: 200% auto;
+  transition: background-position 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.x:hover {
+  background-position: 100% 50%;
+}
+
+.instagram {
+  padding: 1% 7%;
+  margin: 0 auto;
+  font-size: small;
+  color: #000000;
+  border: 3px double #2b2b2b;
+  background: linear-gradient(to bottom right, #ffffff 40%, #f884ce);
+  background-position: 0 50%;
+  background-size: 200% auto;
+  transition: background-position 0.5s ease-in-out;
+}
+
+.instagram:hover {
+  background-position: 100% 50%;
+}
+
+.youtube {
+  padding: 1% 6%;
+  margin: 0 auto;
+  color: #000000;
+  font-size: small;
+  border: 3px double #2b2b2b;
+  background: linear-gradient(to bottom right, #ffffff 40%, #ff4949);
+  background-position: 0 50%;
+  background-size: 200% auto;
+  transition: background-position 0.5s ease-in-out;
+
+}
+
+.youtube:hover {
+  background-position: 100% 50%;
+} */
+.x{
+ padding: 1% 7%;
+  margin: 0 auto;
+}
+.instagram{
+ padding: 1% 7%;
+  margin: 0 auto;
+}
+.youtube{
+ padding: 1% 7%;
+  margin: 0 auto;
+}
+.xImg{
+  height: 50px;
+}
+.instImg{
+  height: 50px;
+}
+.ytImg{
+  height: 25px;
+  margin-top: 7%;
+}
