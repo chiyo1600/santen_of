@@ -3,6 +3,7 @@
 body {
   /* background-color: #1c1616; */
   font-family: 'Sawarabi Gothic', sans-serif;
+  background-color: #f8f8f3;
 }
 
 .top {
@@ -237,7 +238,7 @@ h2 {
   left: 50%;
   width: 85%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: #ffffffe5;
   padding: 20px;
   /* border-radius: 8px; */
   box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.6);
@@ -254,9 +255,10 @@ h2 {
 }
 
 button {
-  background-color: #ffffff;
+  background-color: #f8f8f3;
   border: none;
   color: #000000;
+  font-size: small;
 }
 
 /* バナー */
@@ -278,17 +280,33 @@ button {
   filter: drop-shadow(0 0 5px black);
 }
 
-.bannerTitle {
+/* PC */
+@media screen and (min-width: 767px) {
+  .bannerTitle {
   z-index: 3;
   position: absolute;
-  margin: 5px;
-  font-size: medium;
+  /* margin: 5px; */
+  font-size: larger;
   text-decoration: dashed;
   color: #fffcfc;
   font-weight: 700;
   font-family: 'Sawarabi Mincho', sans-serif;
 }
+}
 
+/* スマホ */
+@media screen and (max-width: 767px) {
+  .bannerTitle {
+  z-index: 3;
+  position: absolute;
+  /* margin: 5px; */
+  font-size:small;
+  text-decoration: dashed;
+  color: #fffcfc;
+  font-weight: 700;
+  font-family: 'Sawarabi Mincho', sans-serif;
+}
+}
 /* .banner{
   position: relative;
   }
@@ -315,10 +333,9 @@ button {
   width: 100%;
 }
 
-.x {
+/* .x {
   padding: 1% 7%;
   margin: 0 auto;
-  /* width: 20vh; */
   color: #000000;
   font-size: small;
   border: 3px double #2b2b2b;
@@ -336,7 +353,6 @@ button {
 .instagram {
   padding: 1% 7%;
   margin: 0 auto;
-  /* width: 20vh; */
   font-size: small;
   color: #000000;
   border: 3px double #2b2b2b;
@@ -353,7 +369,6 @@ button {
 .youtube {
   padding: 1% 6%;
   margin: 0 auto;
-  /* width: 20vh; */
   color: #000000;
   font-size: small;
   border: 3px double #2b2b2b;
@@ -366,4 +381,26 @@ button {
 
 .youtube:hover {
   background-position: 100% 50%;
+} */
+.x{
+ padding: 1% 7%;
+  margin: 0 auto;
+}
+.instagram{
+ padding: 1% 7%;
+  margin: 0 auto;
+}
+.youtube{
+ padding: 1% 7%;
+  margin: 0 auto;
+}
+.xImg{
+  height: 50px;
+}
+.instImg{
+  height: 50px;
+}
+.ytImg{
+  height: 25px;
+  margin-top: 7%;
 }

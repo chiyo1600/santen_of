@@ -130,13 +130,11 @@ a {
 
 body {
   font-family: 'Sawarabi Gothic', sans-serif;
-  /* background-color: #181818; */
+  /* background-color: #f8f8f3; */
 }
 
 
-.santenInfo {
-  position: relative;
-}
+
 
 
 /* メンバー */
@@ -167,12 +165,13 @@ body {
     position: absolute;
     width: 7%;
     height: auto;
-    margin: 5px 0px 5px 5px;
+    /* margin: 5px 0px 5px 5px; */
   }
 
   /* 団体説明 */
   .santenAbout {
     display: flex;
+    background-color: #f8f8f3;
   }
 
   .aboutSanten {
@@ -277,6 +276,9 @@ body {
 
 /* スマホ */
 @media screen and (max-width: 767px) {
+  .santenInfo {
+    position: relative;
+  }
 
   .header_logo {
     position: absolute;
@@ -290,7 +292,117 @@ body {
   /* 団体説明 */
   .aboutSanten {
     width: 100%;
-    /* height: auto; */
+    height: auto;
+    z-index: 1;
+    top: 0;
+    filter: drop-shadow(0 0 6px black);
+    border-radius: 3%;
+    filter: sepia(70%) opacity(40%);
+    /* background-color: #f8f8f3; */
+  }
+
+  .santenText {
+    position: absolute;
+    margin: 0 0;
+    z-index: 3;
+    top: 15%;
+    left: 1rem;
+    color: #000000;
+    font-size: small;
+    line-height: 2;
+    font-family: "Yomogi", cursive;
+
+  }
+
+  /* メンバー紹介 */
+  .santenMember {
+    margin-top: 2rem;
+    background-image:
+      linear-gradient(0deg, transparent 19px, #d3d3d3 20px),
+      linear-gradient(90deg, transparent 19px, #d3d3d3 20px);
+    background-size: 20px 20px;
+    font-family: "Yomogi", cursive;
+
+  }
+
+  .role {
+    text-align: right;
+  }
+
+  .menberImg {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    /* ※縦横を同値に */
+    height: 150px;
+    /* ※縦横を同値に */
+    border-radius: 50%;
+    /* 角丸半径を50%にする(=円形にする) */
+    background-position: left top;
+    /* 横長画像の左上を基準に表示 */
+  }
+
+  .hinano {
+    margin: 1rem;
+    padding: 1.3rem 1rem;
+    border-radius: 30px 60px / 60px 30px;
+    /* 角をランダムに丸めて手書き風に */
+    border: solid 1.5px #000000;
+    /* 太めの枠線（8px、色: #ccc7be） */
+  }
+
+  .chiyo {
+    margin: 1rem;
+    padding: 1.3rem 1rem;
+    border-radius: 60px 20px / 40px 50px;
+    /* 角をランダムに丸めて手書き風に */
+    border: solid 1.5px #000000;
+    /* 太めの枠線（8px、色: #ccc7be） */
+  }
+
+  .mizuki {
+    margin: 1rem;
+    padding: 1.3rem 1rem;
+    border-radius: 40px 50px / 70px 20px;
+    /* 角をランダムに丸めて手書き風に */
+    border: solid 1.5px #000000;
+    /* 太めの枠線（8px、色: #ccc7be） */
+  }
+
+  .yukiko {
+    margin: 1rem;
+    padding: 1.3rem 1rem;
+    border-radius: 70px 30px / 20px 60px;
+    /* 角をランダムに丸めて手書き風に */
+    border: solid 1.5px #000000;
+    /* 太めの枠線（8px、色: #ccc7be） */
+  }
+
+  .honoka {
+    margin: 1rem;
+    padding: 1.3rem 1rem;
+    border-radius: 70px 30px / 40px 60px;
+    /* 角をランダムに丸めて手書き風に */
+    border: solid 1.5px #000000;
+    /* 太めの枠線（8px、色: #ccc7be） */
+  }
+}
+
+@media screen and (max-width: 380px) {
+
+  .header_logo {
+    position: absolute;
+    z-index: 2;
+    width: 13%;
+    height: auto;
+    margin: 5px 0px 5px 5px;
+
+  }
+
+  /* 団体説明 */
+  .aboutSanten {
+    width: 100%;
+    height: auto;
     z-index: 1;
     top: 0;
     filter: drop-shadow(0 0 6px black);
@@ -305,7 +417,7 @@ body {
     top: 15%;
     left: 1rem;
     color: #000000;
-    font-size: small;
+    font-size: xx-small;
     line-height: 2;
   }
 
